@@ -1,0 +1,30 @@
+Map<String,String> classlist = new HashMap<String,String>();
+public ClassGrades(){
+classlist.put("Bob","A");
+classlist.put("Mary","B");
+classlist.put("Sarah","C");
+classlist.put("Phillip","A");
+classlist.put("Greg","F");
+}
+public void printClassList(){
+Iterator<Entry<String,String>> entries = classList.entrySet().iterator();
+while (entries.hasNext()) {
+Entry<String, String> entry = entries.next();
+System.out.println("Key = " + entry.getKey() + " , Value = " + entry. getValue());
+}
+}
+public void printClassList2(){
+for (Map.Entry<String, String> entry : classList.entryset()) {
+System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+}
+for (String key : classList.keySet()){
+System.out.println("Key = " + key);
+}
+for (String value : classList.values()){
+System.out.println("Value = " + value);
+}
+}
+public static void main(String [] args) {
+ClassGrades myClassList = new ClassGrades();
+myClassList.printClassList();
+}
